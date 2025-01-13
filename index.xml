@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://www.adrianmoreno.info/</link>
+    <link>https://mao3267.github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://www.adrianmoreno.info/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mao3267.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
