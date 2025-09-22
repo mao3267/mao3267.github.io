@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/mao3267/mao3267.github.io.git
-	branch = main
