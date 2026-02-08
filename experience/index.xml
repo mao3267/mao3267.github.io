@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experiences on </title>
+    <link>http://localhost:1314/experience/</link>
+    <description>Recent content in Experiences on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Jan 2025 21:50:20 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1314/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research Assistant</title>
+      <link>http://localhost:1314/experience/nlplab/</link>
+      <pubDate>Mon, 13 Jan 2025 21:50:20 +0800</pubDate>
+      <guid>http://localhost:1314/experience/nlplab/</guid>
+      <description>&lt;h3 id=&#34;the-beginning-of-my-llm-journey&#34;&gt;The Beginning of My LLM Journey&lt;/h3&gt;&#xA;&lt;p&gt;Under the guidance of Prof. An-Zi Yen, I delved into a lecture-abstract-based question generation system project, where we fine-tuned an LLM on self-collected datasets. Our demo system&amp;rsquo;s performance has outperformed state-of-the-art models, and I led the authorship of a paper accepted at the International Joint Conference on Artificial Intelligence (IJCAI). Recognizing LLMs&amp;rsquo; challenges in performing complex reasoning and answering questions, we focused on error detection in math problems and achieved improvements through our proposed self-refinement framework.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Omnichat</title>
+      <link>http://localhost:1314/experience/omnichat/</link>
+      <pubDate>Mon, 13 Jan 2025 19:36:27 +0800</pubDate>
+      <guid>http://localhost:1314/experience/omnichat/</guid>
+      <description>&lt;h3 id=&#34;empowering-possibilities-through-llms&#34;&gt;Empowering possibilities through LLMs&lt;/h3&gt;&#xA;&lt;p&gt;In my journey to expand the practical application of my LLM research skills, I took on an AI Research Internship at OmniChat, where I delved into the dynamic intersection of software engineering and natural language processing. During this role, I contributed to the development of an &amp;ldquo;AI Customer Service Chatbot&amp;rdquo; by integrating retrieval-augmented generation with automated workflows, creating an end-to-end chatbot solution. My work also involved incorporating LLM agents into existing systems to streamline audience targeting and promotional workflow creation using intuitive, natural language commands. These experiences not only deepened my technical expertise in large language models but also offered valuable insights into the challenges and intricacies of building and maintaining NLP systems in an industry setting. Through this role, I witnessed firsthand the transformative impact of retrieval systems and LLM agents in solving complex problems and enhancing access to information.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

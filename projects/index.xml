@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on </title>
+    <link>http://localhost:1314/projects/</link>
+    <description>Recent content in Projects on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1314/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FoodiePlan</title>
+      <link>http://localhost:1314/projects/foodieplan/</link>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1314/projects/foodieplan/</guid>
+      <description>&lt;p&gt;A meal planning web app built with Next.js, MongoDB, and Google OAuth. FoodiePlan leverages Gemini AI to generate personalized recipe suggestions and weekly meal plans based on user preferences, dietary restrictions, and available ingredients.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>E-QGen: Educational Lecture Abstract-based Question Generation System</title>
+      <link>http://localhost:1314/projects/eqgen/</link>
+      <pubDate>Mon, 13 Jan 2025 19:38:56 +0800</pubDate>
+      <guid>http://localhost:1314/projects/eqgen/</guid>
+      <description>&lt;p&gt;A lecture abstract-based question generation system optimizing the preparation process for educators in academic lectures and associated Q&amp;amp;A sessions. Given a lecture abstract, E-QGen generates potential student inquiries. The questions suggested by our system are expected to not only facilitate teachers in preparing answers in advance but also enable them to supply additional resources when necessary. This demo paper was accepted by the International Joint Conference on Artificial Intelligence (IJCAI) 2024 at Jeju.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flyte Open Source Contributions</title>
+      <link>http://localhost:1314/projects/flyte/</link>
+      <pubDate>Mon, 13 Jan 2025 19:38:45 +0800</pubDate>
+      <guid>http://localhost:1314/projects/flyte/</guid>
+      <description>&lt;p&gt;Collaborating with open-source community members worldwide to implement features and fix bugs strengthened my software development and communication skills, laying the foundation for contributing to large-scale projects. My contributions mainly focus on enhancing dataclass support and implementing features that strengthen the usability of Flyte and its python SDK Flytekit. Since now, I have contributed over 15 pull requests and 1000 lines of code.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

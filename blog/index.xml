@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on </title>
+    <link>http://localhost:1314/blog/</link>
+    <description>Recent content in Blogs on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Jan 2025 20:37:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1314/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Personal Website started!</title>
+      <link>http://localhost:1314/blog/post%231/</link>
+      <pubDate>Mon, 13 Jan 2025 20:37:49 +0800</pubDate>
+      <guid>http://localhost:1314/blog/post%231/</guid>
+      <description>&lt;p&gt;The idea of creating a personal website has been on my mind for several years. After much consideration and effort, I am excited to announce that I have finally launched my personal website! In the near future, I plan to publish engaging articles and blogs here.&lt;/p&gt;&#xA;&lt;p&gt;I want to express my gratitude to Hugo and the many helpful blogs and videos that guided me through the process. Thanks to these resources, the very first version of my website is now live! My goal is to publish new blog posts every week to document my journey and share valuable insights.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
