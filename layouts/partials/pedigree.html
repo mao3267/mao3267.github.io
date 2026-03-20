@@ -1,0 +1,105 @@
+{{ if or .Site.Data.homepage.education.enable .Site.Data.homepage.experience.enable }}
+<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-surface-low">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section heading -->
+    <div class="mb-16 fade-in-up">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+        {{ i18n "pedigree_title" | default "Pedigree & Path." }}
+      </h2>
+      <p class="text-slate-400 max-w-2xl">{{ i18n "about_content" | plainify | truncate 200 }}</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+      <!-- Left column: About + highlight card -->
+      <div class="lg:col-span-4 space-y-6 fade-in-up">
+        <!-- About image -->
+        {{ with .Site.Data.homepage.about.image.x }}
+        {{ $img := resources.Get . }}
+        {{ with $img }}
+        <div class="rounded-2xl overflow-hidden border border-white/10 mb-6">
+          <img src="{{ .RelPermalink }}" alt="Vincent Chen" class="w-full h-auto object-cover">
+        </div>
+        {{ end }}
+        {{ end }}
+
+        <!-- Highlight card -->
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-white">rocket_launch</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-200">Open Source</p>
+              <p class="text-xs text-slate-400">Core Contributor at Flyte</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">15+ pull requests and 1000+ lines of code contributed to Flyte, a scalable workflow orchestration platform.</p>
+        </div>
+      </div>
+
+      <!-- Right column: Timeline -->
+      <div class="lg:col-span-8 fade-in-up delay-1">
+
+        <!-- Education -->
+        {{ if .Site.Data.homepage.education.enable }}
+        <div class="mb-12">
+          <h3 class="font-display text-xl font-semibold mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary">school</span>
+            {{ i18n "education_title" }}
+          </h3>
+
+          <div class="space-y-6">
+            {{ range .Site.Data.homepage.education.items }}
+            <div class="flex gap-4 items-start">
+              <div class="timeline-dot mt-1"></div>
+              <div class="flex-1 glass-card p-5">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                  <h4 class="font-display font-semibold text-slate-100">{{ .university }}</h4>
+                  <span class="text-xs text-primary-light font-medium">{{ .year }}</span>
+                </div>
+                <p class="text-sm text-slate-400">{{ .degree }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+        <!-- Experience -->
+        {{ if .Site.Data.homepage.experience.enable }}
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-secondary">work</span>
+            {{ i18n "experience_title" }}
+          </h3>
+
+          <div class="relative pl-4">
+            <div class="timeline-line"></div>
+
+            <div class="space-y-6">
+              {{ $experiencePages := where .Site.RegularPages "Type" "experience" }}
+              {{ range $experiencePages }}
+              <div class="flex gap-4 items-start">
+                <div class="timeline-dot mt-1"></div>
+                <div class="flex-1 glass-card p-5">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h4 class="font-display font-semibold text-slate-100">{{ .Params.jobTitle }}</h4>
+                    <span class="text-xs text-primary-light font-medium">{{ .Params.duration }}</span>
+                  </div>
+                  <p class="text-sm text-secondary font-medium mb-2">{{ .Params.company }} · {{ .Params.location }}</p>
+                  <div class="text-sm text-slate-400 leading-relaxed">{{ .Content | plainify | truncate 200 }}</div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

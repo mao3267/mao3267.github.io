@@ -1,0 +1,69 @@
+{{ if .Site.Data.homepage.client_and_work.enable }}
+<section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section heading -->
+    <div class="mb-12 fade-in-up">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+        {{ i18n "selected_works_title" | default "Selected Works." }}
+      </h2>
+      <p class="text-slate-400 max-w-2xl">Deep dives into specific problems solved through code, architecture, and engineering.</p>
+    </div>
+
+    <!-- Bento Grid -->
+    {{ $projects := where .Site.RegularPages "Type" "projects" }}
+    {{ $projects = where $projects ".Draft" false }}
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      {{ range $index, $project := $projects }}
+
+      {{ $isLarge := eq (mod $index 3) 0 }}
+      {{ $colSpan := cond $isLarge "md:col-span-8" "md:col-span-4" }}
+      {{ if eq (mod $index 3) 2 }}
+        {{ $colSpan = "md:col-span-12" }}
+      {{ end }}
+
+      <div class="{{ $colSpan }} fade-in-up delay-{{ add 1 $index }}">
+        <div class="bento-card h-full flex flex-col">
+          <!-- Project Image -->
+          {{ with $project.Params.image.x }}
+          {{ $img := resources.Get . }}
+          {{ with $img }}
+          <div class="aspect-video overflow-hidden">
+            <img src="{{ .RelPermalink }}" alt="{{ $project.Title }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          {{ end }}
+          {{ end }}
+
+          <!-- Project Info -->
+          <div class="p-6 flex-1 flex flex-col">
+            <!-- Tags -->
+            {{ with $project.Params.tags }}
+            <div class="flex flex-wrap gap-2 mb-3">
+              {{ range . }}
+              <span class="tag-chip">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">{{ $project.Title }}</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1 mb-4">{{ $project.Content | plainify | truncate 160 }}</p>
+
+            <!-- Action button -->
+            {{ with $project.Params.button }}
+            <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-white transition-colors">
+              {{ .btnText }}
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+{{ end }}

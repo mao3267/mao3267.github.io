@@ -1,0 +1,213 @@
+## Meta tags
+- id: "meta_title"
+  translation: "Mao.zip — Vincent Chen's Portfolio"
+- id: "meta_description"
+  translation: "Personal portfolio and blog of Vincent Chen, a CS graduate student at UC San Diego focused on NLP, LLMs, and open-source contributions."
+- id: "meta_keywords"
+  translation: "vincent chen, machine learning, llm, nlp, portfolio, software engineer"
+- id: "meta_author"
+  translation: "Vincent Chen"
+- id: "meta_image"
+  translation: "/img/general/og-image.jpg"
+
+## Header
+- id: "logo_text1"
+  translation: "Mao"
+
+- id: "logo_text2"
+  translation: ".zip"
+
+- id: "nav_home"
+  translation: "HOME"
+
+## General
+- id: "skipToMainContent"
+  translation: "Skip to main content"
+
+- id: "toggle_navigation"
+  translation: "Toggle navigation"
+
+## Footer
+- id: "footer_notice"
+  translation: "© 2026 Vincent Chen. All rights reserved. Code as Art."
+
+- id: "language"
+  translation: "Language"
+
+- id: "toggle_theme"
+  translation: "Toggle theme"
+
+- id: "theme_light"
+  translation: "Light"
+- id: "theme_dark"
+  translation: "Dark"
+- id: "theme_auto"
+  translation: "Auto"
+
+## Homepage head title
+- id: "head_title"
+  translation: "Mao.zip — Vincent Chen"
+
+- id: "head_description"
+  translation: "ML & LLM Engineer building intelligent systems. Open-source contributor. CS @ UC San Diego."
+
+## Homepage showcase / hero
+- id: "showcase_title"
+  translation: "Architecting"
+
+- id: "showcase_subtitle"
+  translation: "Intelligent Systems."
+
+- id: "showcase_description"
+  translation: "I am Mao-Siang Chen (Vincent). I build robust machine learning infrastructure and LLM applications, from fine-tuned models to production-grade systems. Open-source contributor at Flyte."
+
+- id: "showcase_button"
+  translation: "Resume/CV"
+
+- id: "showcase_image_alt"
+  translation: "Vincent Chen"
+
+## Hero extras
+- id: "hero_badge"
+  translation: "Machine Learning & LLM Systems"
+
+- id: "hero_cta_primary"
+  translation: "View Projects"
+
+- id: "hero_cta_secondary"
+  translation: "GitHub Profile"
+
+## Pedigree section
+- id: "pedigree_title"
+  translation: "Pedigree & Path."
+
+## Homepage about
+- id: "about_title"
+  translation: "Who am I?"
+
+- id: "about_content"
+  translation: "My name is Vincent. I am a master student at UC San Diego majoring in Computer Science with a focus on NLP and LLMs. Passionate about developing LLM applications for education and healthcare."
+
+- id: "about_button"
+  translation: "LinkedIn"
+
+## Homepage education
+- id: "education_title"
+  translation: "Education"
+
+## Homepage experience
+- id: "experience_title"
+  translation: "Experience"
+
+- id: "experience_description"
+  translation: "Having over 2 years of research experience on NLP/CV, accompanied by industrial experience on LLM application development and integration."
+
+- id: "experience_button"
+  translation: "LinkedIn"
+
+- id: "experience_button_url"
+  translation: "https://www.linkedin.com/in/mao3267"
+
+- id: "experience_button2"
+  translation: "Download resume"
+
+- id: "experience_button2_url"
+  translation: "/img/general/user-smile-fill.svg"
+
+- id: "experience_button3"
+  translation: "More Detail"
+
+- id: "experience_button3_url"
+  translation: "/experience"
+
+## Selected works
+- id: "selected_works_title"
+  translation: "Selected Works."
+
+- id: "client_work_title"
+  translation: "Projects"
+
+## Blog
+- id: "blog_hero_title"
+  translation: "Technical"
+
+- id: "blog_hero_accent"
+  translation: "Journal."
+
+- id: "read_more"
+  translation: "Read more"
+
+- id: "published_on"
+  translation: "Published on"
+
+- id: "continue_reading"
+  translation: "Continue reading"
+
+## CTA
+- id: "cta_title"
+  translation: "The Architect's Log."
+
+## Newsletter
+- id: "newsletter_title"
+  translation: "Newsletter"
+
+- id: "newsletter_button"
+  translation: "Subscribe"
+
+- id: "newsletter_placeholder"
+  translation: "Your email"
+
+- id: "newsletter_success_message"
+  translation: "Thank you for subscribing to my newsletter!"
+
+- id: "newsletter_error_message"
+  translation: "An error occurred. Please try again."
+
+- id: "newsletter_note"
+  translation: "We'll never share your email with anyone else."
+
+## Homepage testimonials
+- id: "testimonials_title"
+  translation: "Testimonials"
+
+## Homepage contact
+- id: "contact_title"
+  translation: "Contact"
+
+- id: "contact_button"
+  translation: "Send message"
+
+- id: "contact_form_name"
+  translation: "Full Name"
+
+- id: "contact_form_email"
+  translation: "Email Address"
+
+- id: "contact_form_message"
+  translation: "Type Your Message Here"
+
+- id: "contact_phone_title"
+  translation: "Phone Number"
+
+- id: "contact_phone_number"
+  translation: ""
+
+- id: "contact_email_title"
+  translation: "Email"
+
+- id: "contact_email_email"
+  translation: '<a href="mailto:chenvincent610@gmail.com">chenvincent610@gmail.com</a>'
+
+- id: "contact_address_title"
+  translation: "Address"
+
+- id: "contact_address_address"
+  translation: "La Jolla, CA"
+
+## 404 Page
+- id: "404_title"
+  translation: "Page not found"
+- id: "404_description"
+  translation: "Sorry, but the page you were looking for could not be found."
+- id: "404_button"
+  translation: "Back to homepage"

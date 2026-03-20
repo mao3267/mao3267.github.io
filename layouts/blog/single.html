@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="{{ $.Lang }}" class="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="bg-surface font-body text-slate-200 antialiased">
+
+  {{ partial "header.html" . }}
+
+  <article class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Article header -->
+      <header class="mb-12 fade-in-up">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/blog/" class="inline-flex items-center gap-1 text-sm text-primary-light hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-base">arrow_back</span>
+            Back to Journal
+          </a>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-100 mb-6">
+          {{ .Title }}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">calendar_today</span>
+            {{ .Date.Format "January 2, 2006" }}
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">schedule</span>
+            {{ math.Round (div (float .WordCount) 200.0) }} min read
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">text_fields</span>
+            {{ .WordCount }} words
+          </span>
+        </div>
+
+        <!-- Tags -->
+        {{ with .GetTerms "tags" }}
+        <div class="flex flex-wrap gap-2 mt-4">
+          {{ range . }}
+          <a href="{{ .RelPermalink }}" class="tag-chip">{{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </header>
+
+      <!-- Article content -->
+      <div class="blog-content prose prose-invert prose-lg max-w-none fade-in-up delay-1">
+        {{ .Content }}
+      </div>
+
+      <!-- Navigation -->
+      <nav class="mt-16 pt-8 border-t border-white/10 fade-in-up delay-2">
+        <div class="flex items-center justify-between">
+          {{ with .PrevInSection }}
+          <a href="{{ .RelPermalink }}" class="flex items-center gap-2 text-sm text-slate-400 hover:text-primary-light transition-colors">
+            <span class="material-symbols-outlined text-base">arrow_back</span>
+            {{ .Title | truncate 40 }}
+          </a>
+          {{ else }}
+          <div></div>
+          {{ end }}
+
+          {{ with .NextInSection }}
+          <a href="{{ .RelPermalink }}" class="flex items-center gap-2 text-sm text-slate-400 hover:text-primary-light transition-colors">
+            {{ .Title | truncate 40 }}
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+          {{ else }}
+          <div></div>
+          {{ end }}
+        </div>
+      </nav>
+
+      <!-- Newsletter CTA -->
+      {{ if site.Data.homepage.newsletter.enable }}
+      <div class="mt-16 glass-card p-8 text-center fade-in-up delay-3">
+        <h3 class="font-display text-xl font-semibold mb-2">Enjoyed this post?</h3>
+        <p class="text-sm text-slate-400 mb-5">Get notified when new articles are published.</p>
+        <div class="max-w-md mx-auto">
+          {{ partial "newsletter-form.html" (dict "variant" "inline") }}
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </article>
+
+  {{ partial "footer-new.html" . }}
+  {{ partial "base-foot.html" . }}
+
+</body>
+</html>

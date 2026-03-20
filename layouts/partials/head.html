@@ -1,0 +1,65 @@
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0b1326"/>
+
+<title>{{ i18n "head_title" }}</title>
+<meta name="description" content='{{ i18n "head_description" }}'>
+
+<!-- Google Fonts: Space Grotesk + Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        surface: {
+          DEFAULT: '#0b1326',
+          low: '#0f1a33',
+          mid: '#131f3e',
+          high: '#1a2847',
+        },
+        primary: {
+          DEFAULT: '#7858e5',
+          light: '#ccbeff',
+          dark: '#5a3db8',
+        },
+        secondary: {
+          DEFAULT: '#97d2c9',
+          light: '#b8e4dd',
+        },
+        accent: {
+          violet: '#7858e5',
+          teal: '#97d2c9',
+        },
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+
+<!-- Tailwind Typography Plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+{{- /* architect.css for glass effects, gradients, animations */ -}}
+{{ $architect := resources.Get "css/architect.css" }}
+{{ if $architect }}
+  {{ if hugo.IsProduction }}
+    {{ $architect = $architect | minify | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $architect.RelPermalink }}">
+{{ end }}
+
+{{ template "_internal/opengraph.html" . }}

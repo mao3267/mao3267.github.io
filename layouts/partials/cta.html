@@ -1,0 +1,43 @@
+<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto fade-in-up">
+    <div class="glass-card p-10 sm:p-14 text-center gradient-border rounded-2xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+        {{ i18n "cta_title" | default "The Architect's Log." }}
+      </h2>
+      <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+        A compact, respectful log of systems, architectures, the thinking behind them.
+      </p>
+
+      <!-- Contact info -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+        <a href="mailto:chenvincent610@gmail.com"
+           class="inline-flex items-center gap-2 text-primary-light hover:text-white transition-colors">
+          <span class="material-symbols-outlined">mail</span>
+          chenvincent610@gmail.com
+        </a>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="inline-flex items-center gap-2 text-slate-400">
+          <span class="material-symbols-outlined">location_on</span>
+          {{ i18n "contact_address_address" | default "La Jolla, CA" }}
+        </span>
+      </div>
+
+      <!-- Newsletter form -->
+      {{ if site.Data.homepage.newsletter.enable }}
+      <div class="max-w-md mx-auto mb-8">
+        {{ partial "newsletter-form.html" (dict "variant" "inline") }}
+      </div>
+      {{ end }}
+
+      <!-- Social links row -->
+      <div class="flex items-center justify-center gap-4">
+        {{ range .Site.Data.homepage.showcase.socialLinks }}
+        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer"
+           class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary-light hover:border-primary transition-all">
+          {{ partial "social-icon.html" (dict "label" .label "size" "18") }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

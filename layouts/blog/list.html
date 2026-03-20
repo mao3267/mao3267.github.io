@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="{{ $.Lang }}" class="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="bg-surface font-body text-slate-200 antialiased">
+
+  {{ partial "header.html" . }}
+
+  <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Hero -->
+      <div class="mb-16 fade-in-up">
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          {{ i18n "blog_hero_title" | default "Technical" }}
+          <span class="gradient-text">{{ i18n "blog_hero_accent" | default "Journal." }}</span>
+        </h1>
+        <p class="text-slate-400 text-lg max-w-2xl">
+          Exploring the intersection of architectural systems, high-performance code, and modern design aesthetics.
+        </p>
+      </div>
+
+      <!-- Tag filter chips -->
+      <div class="flex flex-wrap gap-3 mb-12 fade-in-up delay-1">
+        <a href="/blog/" class="tag-chip bg-primary/20 border-primary/40 text-primary-light">All Posts</a>
+        {{ $allTags := slice }}
+        {{ range .Pages }}
+          {{ with .GetTerms "tags" }}
+            {{ range . }}
+              {{ $allTags = $allTags | append .LinkTitle }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ $uniqueTags := $allTags | uniq }}
+        {{ range $uniqueTags }}
+        <a href="{{ relURL (printf "/tags/%s/" (. | urlize)) }}" class="tag-chip">{{ . }}</a>
+        {{ end }}
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+        <!-- Blog Feed (8 cols) -->
+        <div class="lg:col-span-8 space-y-8">
+
+          {{ $paginator := .Paginate .Pages 10 }}
+
+          {{ range $index, $page := $paginator.Pages }}
+          {{ if eq $index 0 }}
+          <!-- Featured first post -->
+          <article class="bento-card overflow-hidden fade-in-up">
+            <div class="p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs text-slate-500 uppercase tracking-wider font-medium">Featured Article</span>
+                <span class="text-slate-700">·</span>
+                <span class="text-xs text-slate-500">{{ .Date.Format "Jan 2, 2006" }}</span>
+              </div>
+              <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-100 mb-3">
+                <a href="{{ .RelPermalink }}" class="hover:text-primary-light transition-colors">{{ .Title }}</a>
+              </h2>
+              <p class="text-slate-400 leading-relaxed mb-4">{{ .Summary | plainify | truncate 250 }}</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs text-slate-500">{{ .WordCount }} words</span>
+                  <span class="text-xs text-slate-500">· {{ math.Round (div (float .WordCount) 200.0) }} min read</span>
+                </div>
+                <a href="{{ .RelPermalink }}" class="inline-flex items-center gap-1 text-sm font-medium text-primary-light hover:text-white transition-colors">
+                  Read full article
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          {{ else }}
+          <!-- Subsequent posts -->
+          <article class="bento-card p-6 fade-in-up">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-xs text-slate-500">{{ .Date.Format "Jan 2, 2006" }}</span>
+                  <span class="text-xs text-slate-500">· {{ .WordCount }} words</span>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-slate-100 mb-2">
+                  <a href="{{ .RelPermalink }}" class="hover:text-primary-light transition-colors">{{ .Title }}</a>
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-3">{{ .Summary | plainify | truncate 160 }}</p>
+                <a href="{{ .RelPermalink }}" class="inline-flex items-center gap-1 text-sm font-medium text-primary-light hover:text-white transition-colors">
+                  Read more
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          {{ end }}
+          {{ end }}
+
+          <!-- Pagination -->
+          {{ if gt $paginator.TotalPages 1 }}
+          <nav class="flex items-center justify-center gap-2 pt-8">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary-light hover:border-primary transition-all">
+              <span class="material-symbols-outlined text-lg">chevron_left</span>
+            </a>
+            {{ end }}
+
+            {{ range $paginator.Pagers }}
+            <a href="{{ .URL }}"
+               class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-all
+                      {{ if eq . $paginator }}gradient-primary text-white{{ else }}border border-slate-700 text-slate-400 hover:text-primary-light hover:border-primary{{ end }}">
+              {{ .PageNumber }}
+            </a>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary-light hover:border-primary transition-all">
+              <span class="material-symbols-outlined text-lg">chevron_right</span>
+            </a>
+            {{ end }}
+          </nav>
+          {{ end }}
+
+        </div>
+
+        <!-- Sidebar (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8 fade-in-up delay-2">
+
+          <!-- Newsletter card -->
+          <div class="glass-card p-6">
+            <h3 class="font-display text-lg font-semibold mb-2 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary">subscriptions</span>
+              Join the Stack
+            </h3>
+            <p class="text-sm text-slate-400 mb-4">Bi-weekly insights on frontier leadership and architectural patterns, the signals just high.</p>
+            {{ partial "newsletter-form.html" (dict "variant" "stacked") }}
+          </div>
+
+          <!-- Categories -->
+          <div class="glass-card p-6">
+            <h3 class="font-display text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Categories</h3>
+            <div class="space-y-2">
+              {{ range .Site.Taxonomies.tags }}
+              <a href="{{ .Page.RelPermalink }}" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
+                <span>{{ .Page.Title }}</span>
+                <span class="text-xs text-slate-500">{{ .Count }}</span>
+              </a>
+              {{ end }}
+              {{ if not .Site.Taxonomies.tags }}
+              <p class="text-sm text-slate-500">No categories yet.</p>
+              {{ end }}
+            </div>
+          </div>
+
+          <!-- GitHub stats widget -->
+          <div class="glass-card p-6">
+            <h3 class="font-display text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">GitHub</h3>
+            <a href="https://github.com/mao3267" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-3 text-slate-300 hover:text-primary-light transition-colors">
+              <span class="material-symbols-outlined text-2xl">code</span>
+              <div>
+                <p class="text-sm font-medium">@mao3267</p>
+                <p class="text-xs text-slate-500">Open source contributions</p>
+              </div>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  {{ partial "footer-new.html" . }}
+  {{ partial "base-foot.html" . }}
+
+</body>
+</html>
