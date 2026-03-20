@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on </title>
+    <link>https://mao3267.github.io/projects/</link>
+    <description>Recent content in Projects on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mao3267.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FoodiePlan</title>
+      <link>https://mao3267.github.io/projects/foodieplan/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/projects/foodieplan/</guid>
+      <description>&lt;p&gt;A meal planning web app built with Next.js, MongoDB, and Google OAuth. FoodiePlan leverages Gemini AI to generate personalized recipe suggestions and weekly meal plans based on user preferences, dietary restrictions, and available ingredients.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>E-QGen: Educational Question Generation</title>
+      <link>https://mao3267.github.io/projects/eqgen/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/projects/eqgen/</guid>
+      <description>&lt;p&gt;A lecture abstract-based question generation system optimizing the preparation process for educators in academic lectures. Given a lecture abstract, E-QGen generates potential student inquiries. This demo paper was accepted by IJCAI 2024 at Jeju.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flyte Open Source Contributions</title>
+      <link>https://mao3267.github.io/projects/flyte/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/projects/flyte/</guid>
+      <description>&lt;p&gt;Collaborating with open-source community members worldwide to implement features and fix bugs. Contributions focus on enhancing dataclass support and features that strengthen the usability of Flyte and its Python SDK Flytekit. Over 15 pull requests and 1000+ lines of code contributed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

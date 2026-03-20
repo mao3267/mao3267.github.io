@@ -247,6 +247,18 @@ body {
   border-radius: 1px;
 }
 
+/* ========== Blog nav purple underline ========== */
+.nav-blog::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #7858e5;
+  border-radius: 1px;
+}
+
 /* ========== Hero Badge ========== */
 .hero-badge {
   display: inline-flex;

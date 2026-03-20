@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 13 Jan 2025 20:37:49 +0800</lastBuildDate>
     <atom:link href="https://mao3267.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Flyte Open Source Contributions</title>
+      <link>https://mao3267.github.io/projects/flyte/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/projects/flyte/</guid>
+      <description>&lt;p&gt;Collaborating with open-source community members worldwide to implement features and fix bugs. Contributions focus on enhancing dataclass support and features that strengthen the usability of Flyte and its Python SDK Flytekit. Over 15 pull requests and 1000+ lines of code contributed.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>My Personal Website started!</title>
       <link>https://mao3267.github.io/blog/post-1/</link>
       <pubDate>Mon, 13 Jan 2025 20:37:49 +0800</pubDate>

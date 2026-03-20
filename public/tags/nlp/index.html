@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#0b1326"/>
@@ -106,16 +106,18 @@ tailwind.config = {
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
   
-  <link rel="stylesheet" href="/css/architect.css">
+    
+  
+  <link rel="stylesheet" href="/css/architect.min.4bdf6f54eb0b19e009788eb897b916794a337374fad024876038f6d14939b680.css">
 
 
-<meta property="og:url" content="http://localhost:1313/blog/">
+<meta property="og:url" content="https://mao3267.github.io/tags/nlp/">
   <meta property="og:site_name" content="Mao.zip — Vincent Chen">
-  <meta property="og:title" content="Blogs">
+  <meta property="og:title" content="NLP">
   <meta property="og:description" content="Personal portfolio and blog of Vincent Chen, a CS graduate student at UC San Diego focused on NLP, LLMs, and open-source contributions.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="http://localhost:1313/img/og-img.png">
+    <meta property="og:image" content="https://mao3267.github.io/img/og-img.png">
 
 
 </head>
@@ -150,7 +152,7 @@ tailwind.config = {
         </a>
         
         <a href="/blog"
-           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item nav-blog">
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item">
           BLOG
         </a>
         
@@ -201,7 +203,7 @@ tailwind.config = {
       </a>
       
       <a href="/blog"
-         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5 nav-blog">
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
         BLOG
       </a>
       
@@ -227,164 +229,52 @@ tailwind.config = {
 
       
       <div class="mb-16 fade-in-up">
+        <a href="/blog/" class="inline-flex items-center gap-1 text-sm text-slate-400 hover:text-primary-light transition-colors mb-6">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          Back to Blog
+        </a>
         <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-          Technical
-          <span class="gradient-text">Journal.</span>
+          Tagged:
+          <span class="gradient-text">NLP</span>
         </h1>
-        <p class="text-slate-400 text-lg max-w-2xl">
-          Exploring the intersection of architectural systems, high-performance code, and modern design aesthetics.
+        <p class="text-slate-400 text-lg">
+          1 post tagged with "NLP"
         </p>
       </div>
 
       
-      <div class="flex flex-wrap gap-3 mb-12 fade-in-up delay-1">
-        <a href="/blog/" class="tag-chip bg-primary/20 border-primary/40 text-primary-light">All Posts</a>
+      <div class="max-w-3xl space-y-8">
         
-        
-          
-            
-              
-            
-              
-            
-              
-            
-          
-        
-        
-        
-        <a href="/tags/web-development/" class="tag-chip">Web Development</a>
-        
-        <a href="/tags/open-source/" class="tag-chip">Open Source</a>
-        
-        <a href="/tags/full-stack/" class="tag-chip">Full Stack</a>
-        
-      </div>
-
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-        
-        <div class="lg:col-span-8 space-y-8">
-
-          
-
-          
-          
-          
-          <article class="bento-card overflow-hidden fade-in-up">
-            <div class="p-8">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs text-slate-500 uppercase tracking-wider font-medium">Featured Article</span>
-                <span class="text-slate-700">·</span>
-                <span class="text-xs text-slate-500">Jan 13, 2025</span>
+        <article class="bento-card p-6 fade-in-up">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-xs text-slate-500">Jun 1, 2024</span>
+                <span class="text-xs text-slate-500">· 34 words</span>
               </div>
-              <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-100 mb-3">
-                <a href="/blog/post-1/" class="hover:text-primary-light transition-colors">My Personal Website started!</a>
-              </h2>
-              <p class="text-slate-400 leading-relaxed mb-4">The idea of creating a personal website has been on my mind for several years. After much consideration and effort, I am excited to announce that I have finally launched my personal website! In the near future, I plan to publish engaging articles and …</p>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <span class="text-xs text-slate-500">115 words</span>
-                  <span class="text-xs text-slate-500">· 1 min read</span>
-                </div>
-                <a href="/blog/post-1/" class="inline-flex items-center gap-1 text-sm font-medium text-primary-light hover:text-white transition-colors">
-                  Read full article
-                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+              <h3 class="font-display text-lg font-semibold text-slate-100 mb-2">
+                <a href="/projects/eqgen/" class="hover:text-primary-light transition-colors">E-QGen: Educational Question Generation</a>
+              </h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-3">A lecture abstract-based question generation system optimizing the preparation process for educators in academic lectures. Given a lecture abstract, E-QGen …</p>
+              <div class="flex items-center gap-4">
+                <a href="/projects/eqgen/" class="inline-flex items-center gap-1 text-sm font-medium text-primary-light hover:text-white transition-colors">
+                  Read more
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
+                <div class="flex flex-wrap gap-2">
+                  
+                  <a href="/tags/nlp/" class="text-xs text-slate-500 hover:text-primary-light transition-colors">#NLP</a>
+                  
+                  <a href="/tags/research/" class="text-xs text-slate-500 hover:text-primary-light transition-colors">#Research</a>
+                  
+                </div>
               </div>
             </div>
-          </article>
-          
-          
-
-          
-          
-
-        </div>
-
+          </div>
+        </article>
         
-        <aside class="lg:col-span-4 space-y-8 fade-in-up delay-2">
-
-          
-          <div class="glass-card p-6">
-            <h3 class="font-display text-lg font-semibold mb-2 flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary">subscriptions</span>
-              Join the Stack
-            </h3>
-            <p class="text-sm text-slate-400 mb-4">Bi-weekly insights on frontier leadership and architectural patterns, the signals just high.</p>
-            <form
-  action="https://buttondown.com/api/emails/embed-subscribe/chenvincent610"
-  method="post"
-  target="_blank"
-  class="space-y-3"
->
-  <input
-    type="email"
-    name="email"
-    placeholder="your@email.com"
-    required
-    class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-primary/60 focus:ring-1 focus:ring-primary/30 transition-colors"
-  />
-  <button
-    type="submit"
-    class="gradient-primary text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
-  >
-    Subscribe
-  </button>
-</form>
-          </div>
-
-          
-          <div class="glass-card p-6">
-            <h3 class="font-display text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Categories</h3>
-            <div class="space-y-2">
-              
-              <a href="/tags/full-stack/" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
-                <span>Full Stack</span>
-                <span class="text-xs text-slate-500">2</span>
-              </a>
-              
-              <a href="/tags/nlp/" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
-                <span>NLP</span>
-                <span class="text-xs text-slate-500">1</span>
-              </a>
-              
-              <a href="/tags/open-source/" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
-                <span>Open Source</span>
-                <span class="text-xs text-slate-500">2</span>
-              </a>
-              
-              <a href="/tags/research/" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
-                <span>Research</span>
-                <span class="text-xs text-slate-500">1</span>
-              </a>
-              
-              <a href="/tags/web-development/" class="flex items-center justify-between py-1.5 text-sm text-slate-300 hover:text-primary-light transition-colors">
-                <span>Web Development</span>
-                <span class="text-xs text-slate-500">2</span>
-              </a>
-              
-              
-            </div>
-          </div>
-
-          
-          <div class="glass-card p-6">
-            <h3 class="font-display text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">GitHub</h3>
-            <a href="https://github.com/mao3267" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-3 text-slate-300 hover:text-primary-light transition-colors">
-              <span class="material-symbols-outlined text-2xl">code</span>
-              <div>
-                <p class="text-sm font-medium">@mao3267</p>
-                <p class="text-xs text-slate-500">Open source contributions</p>
-              </div>
-            </a>
-          </div>
-
-        </aside>
-
       </div>
+
     </div>
   </main>
 

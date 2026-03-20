@@ -33,8 +33,8 @@ about:
     icon: "icon-linkedin"
     URL: "https://www.linkedin.com/in/mao3267"
   image:
-    x: "images/about/maosiang.jpg"
-    _2x: "images/about/maosiang.jpg"
+    x: "images/about/maosiang-1.jpg"
+    _2x: "images/about/maosiang-1.jpg"
 
 # education
 education:

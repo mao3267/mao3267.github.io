@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-	<meta name="generator" content="Hugo 0.140.2">
+	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#0b1326"/>
@@ -25,21 +25,70 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
+         
         surface: {
           DEFAULT: '#0b1326',
-          low: '#0f1a33',
-          mid: '#131f3e',
-          high: '#1a2847',
+          dim: '#0b1326',
+          bright: '#31394d',
+          container: {
+            DEFAULT: '#171f33',
+            lowest: '#060e20',
+            low: '#131b2e',
+            high: '#222a3d',
+            highest: '#2d3449',
+          },
+          variant: '#2d3449',
+          tint: '#ccbeff',
         },
+         
+        'surface-low': '#131b2e',
+        'surface-mid': '#171f33',
+        'surface-high': '#222a3d',
+         
         primary: {
-          DEFAULT: '#7858e5',
+          DEFAULT: '#ccbeff',
           light: '#ccbeff',
           dark: '#5a3db8',
+          container: '#7858e5',
+          fixed: '#e7deff',
+          'fixed-dim': '#ccbeff',
         },
+        'on-primary': '#350097',
+        'on-primary-container': '#fbf5ff',
+         
         secondary: {
           DEFAULT: '#97d2c9',
-          light: '#b8e4dd',
+          light: '#b3eee5',
+          container: '#13524c',
+          fixed: '#b3eee5',
+          'fixed-dim': '#97d2c9',
         },
+        'on-secondary': '#003733',
+        'on-secondary-container': '#89c3bb',
+         
+        tertiary: {
+          DEFAULT: '#b9c8de',
+          container: '#647386',
+          fixed: '#d4e4fa',
+          'fixed-dim': '#b9c8de',
+        },
+         
+        error: {
+          DEFAULT: '#ffb4ab',
+          container: '#93000a',
+        },
+         
+        background: '#0b1326',
+        'on-background': '#dae2fd',
+        'on-surface': '#dae2fd',
+        'on-surface-variant': '#cac4d6',
+        outline: '#938ea0',
+        'outline-variant': '#484554',
+         
+        'inverse-surface': '#dae2fd',
+        'inverse-on-surface': '#283044',
+        'inverse-primary': '#6442d0',
+         
         accent: {
           violet: '#7858e5',
           teal: '#97d2c9',
@@ -58,193 +107,120 @@ tailwind.config = {
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 
   
-    
-  
-  <link rel="stylesheet" href="/css/architect.min.4bdf6f54eb0b19e009788eb897b916794a337374fad024876038f6d14939b680.css">
+  <link rel="stylesheet" href="/css/architect.css">
 
 
-<meta property="og:url" content="https://mao3267.github.io/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Mao.zip — Vincent Chen">
   <meta property="og:title" content="Mao.zip — Vincent Chen">
   <meta property="og:description" content="Personal portfolio and blog of Vincent Chen, a CS graduate student at UC San Diego focused on NLP, LLMs, and open-source contributions.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="https://mao3267.github.io/img/og-img.png">
+    <meta property="og:image" content="http://localhost:1313/img/og-img.png">
 
 
 </head>
 <body class="bg-surface font-body text-slate-200 antialiased">
 
   
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 glass-effect transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
 
-
-<a href="#main-content" 
-    class="skip-to-content-link"
-    aria-label='Skip to main content'>
-  Skip to main content
-</a>
-
-<header class="header fixed-top rad-animation-group" id="header">
-  <div class="container rad-fade-in">
-    <nav class="navbar bd-navbar navbar-expand-lg navbar-light p-0">
-      <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="/">
-          <span>Mao</span>
-          <span>.zip</span>
-        </a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent, #header"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label='Toggle navigation'
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="/"
-                >HOME</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/"
-                >HOME</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#about"
-                >ABOUT</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#portfolio"
-                >PROJECTS</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/blog"
-                >BLOG</a
-              >
-            </li>
-            
-            <li class="nav-item">
-              <a data-scroll class="nav-link" href="/#contact"
-                >CONTACT</a
-              >
-            </li>
-            
-            
-            <li class="nav-item">
-            
-<nav id='mobile-header-language-selector' class='language-selector nav-item dropdown dropup nav-link'>
-     
-    
-    <button
-      type="button"
-      class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show"
-      aria-expanded="false"
-      aria-controls="languages-dropdown-mobile-header"
-      aria-expanded="true"
-      data-bs-toggle="dropdown"
-      data-bs-display="static"
-      aria-label="Select language"
-    >
-      <span class="label">Language</span>
-    </button>
-    <ul
-      class='dropdown-menu dropdown-menu-end '
-      id="languages-dropdown-mobile-header"
-      data-bs-popper="static"
-    >
-      <li class="dropdown-item current active">
-        <span>✔️ English</span>
-      </li>
-       
-       
       
-    </ul>
-  </nav>
-            </li>
-            <li class="nav-item">
-            
-<div id='mobile-header-color-selector' class='nav-item dropdown dropup nav-link'>
-    <button
-      class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show"
-      id='bd-theme-mobile-header'
-      type="button"
-      aria-expanded="true"
-      data-bs-toggle="dropdown"
-      data-bs-display="static"
-      aria-label='Toggle theme'
-    >
-      <span class="theme-icon auto d-none" aria-hidden="true"
-        ></span
-      >
-      <span class="current-theme">Auto</span>
-      <span class="d-lg-none ms-2 visually-hidden" id="bd-theme-text"
-        >Toggle theme</span
-      >
-    </button>
-    <ul
-      id="theme-dropdown-mobile-header"
-      class="dropdown-menu dropdown-menu-end dropup"
-      aria-labelledby="bd-theme-text"
-      data-bs-popper="static"
-    >
-      <li>
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center active"
-          data-bs-theme-value="light"
-          aria-pressed="true"
-        >
-          Light
-        </button>
-      </li>
-      <li>
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center"
-          data-bs-theme-value="dark"
-          aria-pressed="false"
-        >
-          Dark
-          <span class="theme-icon dark d-none" aria-hidden="true"
-            ></span
-          >
-        </button>
-      </li>
-      <li>
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center"
-          data-bs-theme-value="auto"
-          aria-pressed="false"
-        >
-          Auto
-          <span class="theme-icon light d-none" aria-hidden="true"
-            ></span
-          >
-        </button>
-      </li>
-    </ul>
-  </div>
-            </li>
-          </ul>
-        </div>
+      <a href="/" class="font-display text-lg font-bold tracking-tight">
+        <span class="text-primary-light">Mao</span><span class="text-slate-500">.zip</span>
+      </a>
 
+      
+      <div class="hidden md:flex items-center gap-8">
+        
+        <a href="/"
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item">
+          HOME
+        </a>
+        
+        <a href="/#about"
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item">
+          ABOUT
+        </a>
+        
+        <a href="/#portfolio"
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item">
+          PROJECTS
+        </a>
+        
+        <a href="/blog"
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item nav-blog">
+          BLOG
+        </a>
+        
+        <a href="/#contact"
+           class="text-sm font-medium text-slate-400 hover:text-white transition-colors relative nav-link-item">
+          CONTACT
+        </a>
+        
       </div>
-    </nav>
+
+      
+      <div class="hidden md:flex items-center gap-4">
+        
+        <a href="https://drive.google.com/file/d/1tgyy8xRoQMJGS10dndMDx33wfC_TniBz/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+           class="gradient-primary text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition-opacity inline-flex items-center gap-2">
+          <span class="material-symbols-outlined text-base">description</span>
+          Resume/CV
+        </a>
+        
+      </div>
+
+      
+      <button id="mobile-nav-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors" aria-label="Toggle navigation">
+        <span id="menu-open-icon" class="material-symbols-outlined text-2xl">menu</span>
+        <span id="menu-close-icon" class="material-symbols-outlined text-2xl hidden">close</span>
+      </button>
+
+    </div>
   </div>
-</header>
+
+  
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/5">
+    <div class="px-4 py-4 space-y-2">
+      
+      <a href="/"
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+        HOME
+      </a>
+      
+      <a href="/#about"
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+        ABOUT
+      </a>
+      
+      <a href="/#portfolio"
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+        PROJECTS
+      </a>
+      
+      <a href="/blog"
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5 nav-blog">
+        BLOG
+      </a>
+      
+      <a href="/#contact"
+         class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5">
+        CONTACT
+      </a>
+      
+      
+      <a href="https://drive.google.com/file/d/1tgyy8xRoQMJGS10dndMDx33wfC_TniBz/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+         class="block gradient-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full text-center mt-3">
+        <span class="material-symbols-outlined text-base align-middle mr-1">description</span>
+        Resume/CV
+      </a>
+      
+    </div>
+  </div>
+</nav>
 
   
 <section id="showcase" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -323,9 +299,11 @@ tailwind.config = {
       
       <div class="lg:col-span-5 fade-in-up delay-2">
         <div class="relative">
-          
-          
-          
+          <div class="rounded-2xl overflow-hidden border border-white/10">
+            <video autoplay muted loop playsinline class="w-full h-auto object-cover">
+              <source src="/grok-video-e135874e-a24b-4195-bfd1-94f53b3200cc.mp4" type="video/mp4">
+            </video>
+          </div>
 
           
           <div class="glass-card p-4 absolute -bottom-6 -left-6 max-w-[220px]">
@@ -347,7 +325,7 @@ tailwind.config = {
 
 
   
-<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-surface-low">
+<section id="about" class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: #131b2e;">
   <div class="max-w-7xl mx-auto">
 
     
@@ -365,6 +343,10 @@ tailwind.config = {
         
         
         
+        
+        <div class="rounded-2xl overflow-hidden border border-white/10 mb-6">
+          <img src="/images/about/maosiang-1.jpg" alt="Vincent Chen" class="w-full h-auto object-cover">
+        </div>
         
         
 
@@ -436,6 +418,30 @@ tailwind.config = {
             <div class="space-y-6">
               
               
+              <div class="flex gap-4 items-start">
+                <div class="timeline-dot mt-1"></div>
+                <div class="flex-1 glass-card p-5">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h4 class="font-display font-semibold text-slate-100">Research Assistant</h4>
+                    <span class="text-xs text-primary-light font-medium">Jul. 2023 - present</span>
+                  </div>
+                  <p class="text-sm text-secondary font-medium mb-2">NYCU NLP Lab · Hsinchu, Taiwan</p>
+                  <div class="text-sm text-slate-400 leading-relaxed">Under the guidance of Prof. An-Zi Yen, I delved into a lecture-abstract-based question generation system project, where we fine-tuned an LLM on self-collected datasets. Our demo system&rsquo;s …</div>
+                </div>
+              </div>
+              
+              <div class="flex gap-4 items-start">
+                <div class="timeline-dot mt-1"></div>
+                <div class="flex-1 glass-card p-5">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                    <h4 class="font-display font-semibold text-slate-100">Machine Learning Engineer Intern</h4>
+                    <span class="text-xs text-primary-light font-medium">Jan. 2024 - May 2024</span>
+                  </div>
+                  <p class="text-sm text-secondary font-medium mb-2">Omnichat Inc. · Taipei, Taiwan</p>
+                  <div class="text-sm text-slate-400 leading-relaxed">Contributed to the development of an &ldquo;AI Customer Service Chatbot&rdquo; by integrating retrieval-augmented generation with automated workflows, creating an end-to-end chatbot solution. Also …</div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -464,6 +470,144 @@ tailwind.config = {
     
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      
+
+      
+      
+      
+
+      <div class="md:col-span-8 fade-in-up delay-1">
+        <div class="bento-card h-full flex flex-col">
+          
+          
+          
+          
+          <div class="aspect-video overflow-hidden">
+            <img src="/images/projects/foodieplan.png" alt="FoodiePlan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          
+
+          
+          <div class="p-6 flex-1 flex flex-col">
+            
+            
+            <div class="flex flex-wrap gap-2 mb-3">
+              
+              <span class="tag-chip">Full-Stack</span>
+              
+              <span class="tag-chip">Web Development</span>
+              
+            </div>
+            
+
+            <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">FoodiePlan</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1 mb-4">A meal planning web app built with Next.js, MongoDB, and Google OAuth. FoodiePlan leverages Gemini AI to generate personalized recipe suggestions and weekly …</p>
+
+            
+            
+            <a href="https://foodie-plan-mauve.vercel.app/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-white transition-colors">
+              Live Demo
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+      
+      
+
+      <div class="md:col-span-4 fade-in-up delay-2">
+        <div class="bento-card h-full flex flex-col">
+          
+          
+          
+          
+          <div class="aspect-video overflow-hidden">
+            <img src="/images/projects/eqgen-demo.png" alt="E-QGen: Educational Question Generation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          
+
+          
+          <div class="p-6 flex-1 flex flex-col">
+            
+            
+            <div class="flex flex-wrap gap-2 mb-3">
+              
+              <span class="tag-chip">NLP</span>
+              
+              <span class="tag-chip">Research</span>
+              
+            </div>
+            
+
+            <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">E-QGen: Educational Question Generation</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1 mb-4">A lecture abstract-based question generation system optimizing the preparation process for educators in academic lectures. Given a lecture abstract, E-QGen …</p>
+
+            
+            
+            <a href="https://www.ijcai.org/proceedings/2024/996" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-white transition-colors">
+              Paper Link
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+      
+      
+        
+      
+
+      <div class="md:col-span-12 fade-in-up delay-3">
+        <div class="bento-card h-full flex flex-col">
+          
+          
+          
+          
+          <div class="aspect-video overflow-hidden">
+            <img src="/images/projects/flyte.png" alt="Flyte Open Source Contributions" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          
+
+          
+          <div class="p-6 flex-1 flex flex-col">
+            
+            
+            <div class="flex flex-wrap gap-2 mb-3">
+              
+              <span class="tag-chip">Open Source</span>
+              
+            </div>
+            
+
+            <h3 class="font-display text-xl font-semibold text-slate-100 mb-2">Flyte Open Source Contributions</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1 mb-4">Collaborating with open-source community members worldwide to implement features and fix bugs. Contributions focus on enhancing dataclass support and features …</p>
+
+            
+            
+            <a href="https://github.com/search?q=org%3Aflyteorg&#43;author%3Amao3267&amp;type=pullrequests" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:text-white transition-colors">
+              View PRs
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
       
     </div>
 

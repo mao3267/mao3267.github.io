@@ -56,18 +56,14 @@
         </div>
       </div>
 
-      <!-- Right: Image/Video (5 cols) -->
+      <!-- Right: Network visualization (5 cols) -->
       <div class="lg:col-span-5 fade-in-up delay-2">
         <div class="relative">
-          <!-- Video or Image -->
-          {{ $video := resources.Get "grok-video-e135874e-a24b-4195-bfd1-94f53b3200cc.mp4" }}
-          {{ with $video }}
           <div class="rounded-2xl overflow-hidden border border-white/10">
-            <video autoplay muted loop playsinline class="w-full h-auto">
-              <source src="{{ .RelPermalink }}" type="video/mp4">
+            <video autoplay muted loop playsinline class="w-full h-auto object-cover">
+              <source src="/grok-video-e135874e-a24b-4195-bfd1-94f53b3200cc.mp4" type="video/mp4">
             </video>
           </div>
-          {{ end }}
 
           <!-- Glass overlay card -->
           <div class="glass-card p-4 absolute -bottom-6 -left-6 max-w-[220px]">

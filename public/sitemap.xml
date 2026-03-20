@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mao3267.github.io/projects/foodieplan/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/experience/nlplab/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/projects/eqgen/</loc>
+    <lastmod>2024-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/experience/omnichat/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/projects/flyte/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mao3267.github.io/</loc>
     <lastmod>2025-01-13T20:37:49+08:00</lastmod>
   </url><url>
@@ -22,6 +37,18 @@
   </url><url>
     <loc>https://mao3267.github.io/tags/web-development/</loc>
     <lastmod>2025-01-13T20:37:49+08:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/projects/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/tags/nlp/</loc>
+    <lastmod>2024-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/tags/research/</loc>
+    <lastmod>2024-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mao3267.github.io/experience/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mao3267.github.io/categories/</loc>
   </url>

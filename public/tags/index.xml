@@ -9,7 +9,7 @@
     <lastBuildDate>Mon, 13 Jan 2025 20:37:49 +0800</lastBuildDate>
     <atom:link href="https://mao3267.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Full Stack</title>
+      <title>Full-Stack</title>
       <link>https://mao3267.github.io/tags/full-stack/</link>
       <pubDate>Mon, 13 Jan 2025 20:37:49 +0800</pubDate>
       <guid>https://mao3267.github.io/tags/full-stack/</guid>
@@ -27,6 +27,20 @@
       <link>https://mao3267.github.io/tags/web-development/</link>
       <pubDate>Mon, 13 Jan 2025 20:37:49 +0800</pubDate>
       <guid>https://mao3267.github.io/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
+      <link>https://mao3267.github.io/tags/nlp/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://mao3267.github.io/tags/research/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mao3267.github.io/tags/research/</guid>
       <description></description>
     </item>
   </channel>
